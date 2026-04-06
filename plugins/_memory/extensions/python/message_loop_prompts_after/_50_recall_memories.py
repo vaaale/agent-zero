@@ -47,7 +47,7 @@ class RecallMemories(Extension):
             task = asyncio.create_task(
                 asyncio.wait_for(
                     self.search_memories(loop_data=loop_data, log_item=log_item, **kwargs),
-                    timeout=SEARCH_TIMEOUT,
+                    timeout=set["memory_recall_timeout"],
                 )
             )
         else:

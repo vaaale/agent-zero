@@ -121,6 +121,20 @@
 
                 <div class="field">
                     <div class="field-label">
+                        <div class="field-title">Auto-recall timeout (seconds)</div>
+                        <div class="field-description">
+                            Maximum time allowed for a memory recall operation. Increase this if you see
+                            timeout errors with slower LLM providers or when AI query preparation / post-filtering
+                            are enabled.
+                        </div>
+                    </div>
+                    <div class="field-control">
+                        <input type="number" min="10" x-model.number="config.memory_recall_timeout" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-label">
                         <div class="field-title">Memory auto-recall interval</div>
                         <div class="field-description">
                             Memories are recalled after every user or superior agent message. During agent's monologue,
